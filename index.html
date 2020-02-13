@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+    <title>轮播</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.js">
+    </script>
+    <style>
+        .swiper-wrapper .swiper-slide img {
+            width: 100%;
+
+        }
+
+        .swiper-pagination-bullet {
+            background: #fff;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: red;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 10%;
+            height: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./3.png" alt="">
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <!--左箭头-->
+        <div class="swiper-button-next"></div>
+        <!--右箭头-->
+        <div class="swiper-pagination"></div>
+        <!--分页器-->
+    </div>
+</body>
+
+</html>
+<script>
+    var mySwiper = new Swiper('.swiper-container', { //初始化Swiper
+        autoplay: { //自动切换
+            delay: 4000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false,
+        },
+        navigation: { //前进后退
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: { //分页器
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        loop: true, //循环  
+    })
+</script>
